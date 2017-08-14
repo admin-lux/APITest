@@ -1,5 +1,6 @@
 package com.rick.yyy.test.network;
 
+import com.rick.yyy.test.utils.FormatUtil;
 import org.json.JSONObject;
 
 import javax.net.ssl.*;
@@ -154,7 +155,8 @@ public class RestAPIHttpClient {
             while ((line = in.readLine()) != null) {
                 sb.append(line);
             }
-            System.out.println(sb.toString());
+            //JSON 格式化输出
+            FormatUtil.printJson(sb.toString());
             return sb.toString();
         } catch (Exception e) {
             e.printStackTrace();

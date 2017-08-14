@@ -10,13 +10,30 @@ import java.util.HashMap;
 /**
  * Created by MyPC on 2016/10/25.
  */
-public class LoginTest extends YYYBaseTest {
+public class BillsAPITest extends YYYBaseTest {
+
+    @Test
+    public void getBillsCreate0() throws JSONException {
+        RestAPIHttpClient.c("http://localhost:8081" + "/ope/bills/create")
+                .exe("get");
+    }
 
     @Test
     public void getBillsState0() throws JSONException {
         login();
+        //sort=&page=1&size=10&storeName=&date=&statue=
+        HashMap<String, Object> p = new HashMap<String, Object>();
+        p.put("statue", "0");
+        p.put("sort","");
+        p.put("page",1);
+        p.put("size",10);
+        p.put("storeName","");
+        p.put("date","");
+        //http://1600f753m5.iok.la/doctest/ope/bills?token=cab55fe079254e5290b4a9f3a8e1d9ca990000000cc6986aa082440ce873200cfd132dc46&sort=&page=1&size=10&storeName=&date=&statue=0
         RestAPIHttpClient.c(yyy_url_host + "/ope/bills")
+//        RestAPIHttpClient.c("http://localhost:8081/ope/bills")
                 .setToken(token)
+                .add(p)
                 .exe("get");
     }
 

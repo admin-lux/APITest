@@ -8,7 +8,7 @@ import org.junit.Test;
 import java.util.HashMap;
 
 public class YYYBaseTest {
-    public String yyy_url_host = "http://192.168.199.162:8081";
+    public String yyy_url_host = "http://1600f753m5.iok.la/doctest";
 
     public String token;
 
