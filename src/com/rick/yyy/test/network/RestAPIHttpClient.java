@@ -183,7 +183,8 @@ public class RestAPIHttpClient {
             return "".getBytes(CHARSET);
         JSONObject jsonObject = new JSONObject(params);
         String params = jsonObject.toString();
-        System.out.println("params: " + params);
+        System.out.println("params: ");
+        FormatUtil.printJson(params);
         return params.getBytes(CHARSET);
     }
 
