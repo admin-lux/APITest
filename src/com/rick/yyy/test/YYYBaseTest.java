@@ -15,14 +15,14 @@ public class YYYBaseTest {
 
     @Test
     public void login() throws JSONException {
-        HashMap<String, Object> p = new HashMap<String, Object>();
-        p.put("phone", "15701183920");
-        p.put("pwd", "pppppp");
-        String result = RestAPIHttpClient.c(yyy_url_host + "/doc/session")
-                .add(p)
-                .exe("post");
-        JSONObject jsonObject = new JSONObject(result);
-        token = jsonObject.getString("token");
+//        HashMap<String, Object> p = new HashMap<String, Object>();
+//        p.put("phone", "15701183920");
+//        p.put("pwd", "pppppp");
+//        String result = RestAPIHttpClient.c(yyy_url_host + "/doc/session")
+//                .add(p)
+//                .exe("post");
+//        JSONObject jsonObject = new JSONObject(result);
+//        token = jsonObject.getString("token");
     }
 
 }
